@@ -71,11 +71,11 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 text=text_to_admin
             )
         except Exception as e:
-            print("Ошибка отправки админу:", e)
+            print("Ошибка отправки админитратору:", e)
 
         # 👉 ответ пользователю
         await query.edit_message_text(
-            "Заявка отправлена. Мы скоро с вами свяжемся."
+            "Заявка отправлена. Администратор скоро свяжется с вами в личных сообщениях 🦄"
         )
 
 
