@@ -1,12 +1,9 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
+import os
 
-# 🔑 ВСТАВЬ СЮДА ТОКЕН БОТА
-BOT_TOKEN = "8272059482:AAHOpWw91R3_-GAHZCtzNCzw2jEOT20eUM0"
-
-# 🧑‍💻 ВСТАВЬ СЮДА СВОЙ TELEGRAM ID (ЧИСЛОМ!)
-ADMIN_ID = 791800850
-
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
 
 # ▶️ Команда /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
